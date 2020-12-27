@@ -336,5 +336,4 @@ app.get('/api/restaurant/cuisine/:cuisine',function(req, res){
   });
 })
 
-app.listen(app.listen(process.env.PORT || 8099));
-
+module.exports = app
