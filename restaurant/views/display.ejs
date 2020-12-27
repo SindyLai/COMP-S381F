@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>restaurant</title>
+</head>
+<body>
+<img src="<%- photo %>" alt="no photo now">
+<% for(var i in rest){ %>
+    <p><%- i %>:<%- rest[i] %></p>
+<% } %>
+grades:<br>
+<% for(var i in grades){ %>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<%- grades[i].user %>:<%- grades[i].score %></p>
+<% } %>
+<div>
+    <a href="/rate?_id=<%- _id %>" style="text-decoration: none">
+        <button>Rate</button>
+    </a>
+    <a href="/change?_id=<%- _id %>&name=<%- rest.name %>" style="text-decoration: none">
+        <button>Edit</button>
+    </a>
+    <a href="/remove?_id=<%- _id %>" style="text-decoration: none">
+        <button>Delete</button>
+    </a>
+    <button onclick="window.location.href='/read'">Go Back</button>
+</div>
+</body>
+</html>
